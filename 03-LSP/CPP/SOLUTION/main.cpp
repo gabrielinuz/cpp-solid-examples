@@ -24,15 +24,23 @@ class Voladora
         virtual ~Voladora() = default;
 };
 
-class Ave
+class Aovadora
 {
-    // protected:
-    //     int picoSize;
-    //     string plumasTipo;
-    //     Ave();
+    public:
+        virtual void aovar() = 0;
+        virtual ~Aovadora() = default;
+};
+
+class Ave : public Aovadora
+{
+    protected:
+        // string plumasTipo;
+        // Ave();
     public:
         virtual ~Ave() = default;
-        virtual void aovar() { std::cout << "Esta ave está poniendo huevos.\n"; }
+        void piar() { std::cout << "Esta ave está piando.\n"; }
+        //implementa Aovadora
+        virtual void aovar() override { std::cout << "Esta ave está poniendo huevos.\n"; }
 };
 
 class AveNadadora: public Ave, public Nadadora 
@@ -62,7 +70,7 @@ class Pinguino : public AveNadadora
         void nadar() override { std::cout << "El pingüino nada rápido.\n"; }
 };
 
-class Aovadora
+class MaquinaAovadora
 {
     public:
         void iniciarAovacion(const std::vector<std::shared_ptr<Ave>>& aves) const
@@ -78,16 +86,18 @@ int main()
 {
     auto tux = std::make_shared<Pinguino>();
     tux->nadar();
+    tux->piar();
 
     auto peace = std::make_shared<Paloma>();
     peace->volar();
+    peace->piar();
 
     std::vector< std::shared_ptr<Ave> > aves;
     aves.push_back(tux);
     aves.push_back(peace);
 
-    auto aovadora = std::make_unique<Aovadora>();
-    aovadora->iniciarAovacion(aves);
+    auto caterpillar = std::make_unique<MaquinaAovadora>();
+    caterpillar->iniciarAovacion(aves);
     
     return 0;
 }
