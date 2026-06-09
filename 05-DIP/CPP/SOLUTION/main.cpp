@@ -21,6 +21,12 @@ class MotorGasolina : public Motor
         void encender() override { std::cout << "Motor de gasolina encendido.\n"; }
 };
 
+class MotorElectrico : public Motor
+{
+    public:
+        void encender() override { std::cout << "Motor Eléctrico encendido.\n"; }
+};
+
 class Vehiculo 
 {
     private:
@@ -43,6 +49,11 @@ int main()
     auto fiat1500 = std::make_unique<Vehiculo>(std::move(motorFiat));
     std::cout << "Fiat 1500: ";
     fiat1500->arrancar();
+
+    auto motorFiatElectrico = std::make_unique<MotorElectrico>();
+    auto fiat1500Electrico = std::make_unique<Vehiculo>(std::move(motorFiatElectrico));
+    std::cout << "Fiat 1500: ";
+    fiat1500Electrico->arrancar();
     
     // 2. Segundo Vehículo:
     auto motorRenault = std::make_unique<MotorGasolina>();

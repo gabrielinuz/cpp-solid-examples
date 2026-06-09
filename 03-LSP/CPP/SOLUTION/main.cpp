@@ -38,7 +38,7 @@ class Ave : public Aovadora
         // Ave();
     public:
         virtual ~Ave() = default;
-        void piar() { std::cout << "Esta ave está piando.\n"; }
+        virtual void piar() { std::cout << "Esta ave está piando.\n"; }
         //implementa Aovadora
         virtual void aovar() override { std::cout << "Esta ave está poniendo huevos.\n"; }
 };
