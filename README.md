@@ -1,3 +1,4 @@
+# <img src="logo/logo.png" align="center"> C++ Examples
 ## ⧉ Single Responsibility Principle (SRP)
 
 ### ⚙️ Explicación
