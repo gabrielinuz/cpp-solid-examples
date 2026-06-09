@@ -1,6 +1,6 @@
-## 📝 Single Responsibility Principle (SRP)
+## ⧉ Single Responsibility Principle (SRP)
 
-### 🎯 Explicación
+### ⚙️ Explicación
 
 Una clase debe tener **una, y solo una, razón para cambiar**.
 
@@ -8,9 +8,9 @@ Esto significa que cada clase o módulo debe tener una **única responsabilidad*
 
 ---
 
-## 📝 Open/Closed Principle (OCP)
+## ⧉ Open/Closed Principle (OCP)
 
-### 🎯 Explicación
+### ⚙️ Explicación
 
 Las entidades de software (clases, módulos, funciones) deben estar **abiertas para extensión**, pero **cerradas para modificación**.
 
@@ -18,9 +18,9 @@ Debes poder **extender** el comportamiento de un sistema (añadir nuevas funcion
 
 ---
 
-## 📝 Liskov Substitution Principle (LSP)
+## ⧉ Liskov Substitution Principle (LSP)
 
-### 🎯 Explicación
+### ⚙️ Explicación
 
 Los objetos de una **clase derivada** deben poder **sustituir** a objetos de la **clase base** sin alterar la corrección o el comportamiento deseado del programa.
 
@@ -28,9 +28,9 @@ En términos de código, esto significa que cuando se usa el polimorfismo, el su
 
 ---
 
-## 📝 Interface Segregation Principle (ISP)
+## ⧉ Interface Segregation Principle (ISP)
 
-### 🎯 Explicación
+### ⚙️ Explicación
 
 No se debe obligar a los **clientes** (clases que usan la interfaz) a depender de **interfaces que no usan**.
 
@@ -38,9 +38,9 @@ Es mucho mejor tener **interfaces pequeñas y específicas** (segregadas) que un
 
 ---
 
-## 📝 Dependency Inversion Principle (DIP)
+## ⧉ Dependency Inversion Principle (DIP)
 
-### 🎯 Explicación
+### ⚙️ Explicación
 
 Este principio invierte el flujo de dependencia tradicional y se define en dos puntos:
 
